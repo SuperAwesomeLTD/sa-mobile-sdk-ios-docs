@@ -5,12 +5,8 @@ import os
 project = u'iOS SDK'
 copyright = u'2016, SuperAwesome Ltd'
 author = u'Gabriel Coman'
-version = u'<iossdk_version>' # u'3.8.1'
-release = u'<iossdk_version>' # u'3.8.1'
-source = '<iossdk_source>' # 'https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios'
-minversiOS = '<iossdk_minversion>' # 'iOS 6.0+'
-# rst_epilog = ".. |source| replace:: %s " %source
-# rst_epilog = rst_epilog + "\n.. |minversiOS| replace:: %s " %minversiOS
+version = u'<iossdk_version>'
+release = u'<iossdk_version>'
 
 # theme config
 html_theme = 'satheme'
@@ -20,7 +16,7 @@ html_logo = 'themeres/logo.png'
 html_context = {
     'all_versions' : [u'3.8.1'],
     'domain': 'AwesomeAds',
-    'sourcecode': source
+    'sourcecode': '<iossdk_source>'
 }
 
 # aux vars
