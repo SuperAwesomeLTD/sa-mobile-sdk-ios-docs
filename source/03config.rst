@@ -1,5 +1,5 @@
-Configuring the SDK
-===================
+Configure the SDK
+=================
 
 Once you've integrated the SuperAwesome SDK, you can access all functionality by including the SuperAwesome header file:
 

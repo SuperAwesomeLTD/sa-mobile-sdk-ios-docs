@@ -1,4 +1,4 @@
-Parental Gate
+Parental gate
 =============
 
 Parental gates are used in apps targeted towards kids to prevent them from engaging in commerce or following links out of

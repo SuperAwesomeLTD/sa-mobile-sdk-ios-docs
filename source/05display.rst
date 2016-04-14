@@ -1,4 +1,4 @@
-Display Ads
+Display ads
 ===========
 
 In the next sections we'll see how to display banners, inline video ads, interstitials and fullscreen video ads.
@@ -61,8 +61,8 @@ The two functions to pay attention here are **setAd:** and **play**.
 * **setAd:** takes a SAAd object as parameter, in this case bannerAdData. It tells the banner what ad data to try to display.
 * **play** actually starts the display process on screen.
 
-In-Line Video ads
-^^^^^^^^^^^^^^^^^
+Inline video ads
+^^^^^^^^^^^^^^^^
 
 **SAVideoAd** gets initialized and added in a similar way:
 

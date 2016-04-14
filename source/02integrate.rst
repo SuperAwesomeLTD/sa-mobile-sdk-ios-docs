@@ -1,5 +1,5 @@
-Getting started
-===============
+Integrate the SDK
+=================
 
 **Note**: This document assumes:
 
@@ -9,8 +9,8 @@ Getting started
 We use `CocoaPods <http://cocoapods.org>`_ in order to make installing and updating our SDK super easy.
 CocoaPods manages library dependencies for your Xcode projects.
 
-Installing CocoaPods
-^^^^^^^^^^^^^^^^^^^^
+Install CocoaPods
+^^^^^^^^^^^^^^^^^
 
 If you don't have CocoaPods installed on your machine you can install it by issuing the following command in your terminal:
 
@@ -25,8 +25,8 @@ After that you need to go to the project's directory and initialize CocoaPods
     cd /path_to/iOSDemo/
     pod init
 
-Getting the SDK
-^^^^^^^^^^^^^^^
+Download the SDK
+^^^^^^^^^^^^^^^^
 
 The dependencies for your projects are specified in a single text file called a **Podfile**.
 CocoaPods will resolve dependencies between libraries, fetch the resulting source code, then link it together in an Xcode workspace to build your project.

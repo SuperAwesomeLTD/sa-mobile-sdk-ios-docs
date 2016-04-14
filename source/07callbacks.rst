@@ -1,5 +1,5 @@
-Callbacks
-=========
+Ad callbacks
+============
 
 Once an ad starts playing, it will send back callbacks to notify you that it has finished different lifecycle activities.
 To respond to them we'll use a similar protocol / delegate pattern as with SALoaderProtocol.

@@ -21,11 +21,11 @@ Table of Contents:
 .. toctree::
    :maxdepth: 2
 
-   Setting up <01dashboard>
+   Initial setup <01dashboard>
    Integrate the SDK <02integrate>
    Configure the SDK <03config>
    Load ads <04load>
    Display ads <05display>
    Parental gate <06parentalgate>
-   Ad Callbacks <07callbacks>
+   Ad callbacks <07callbacks>
    Examples <08examples>
