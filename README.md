@@ -1,4 +1,4 @@
-# Documentation for the SuperAwesome iOS SDK
+# SuperAwesome iOS SDK documentation
 
 To contribute:
 * clone the current repository on your machine
