@@ -2,7 +2,7 @@ import sys
 import os
 
 # project variables
-project = u'iOS SDK'
+project = u'<sdk_project>'
 copyright = u'<sdk_company>'
 author = u'<sdk_author>'
 version = u'<sdk_version>'

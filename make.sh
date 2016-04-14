@@ -10,6 +10,7 @@ sdk_kws_domain="KWS"
 sdk_devsuspport="devsupport@superawesome.tv"
 sdk_iosmin="iOS 6.0+"
 sdk_androidmin="API 11: Android 3.0 (Honeycomb)"
+sdk_project="iOS SDK"
 sdk_version="3.8.1"
 sdk_source="https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios"
 sdk_author="Gabriel Coman"
@@ -48,6 +49,7 @@ sed -i sedbak "s|<sdk_kws_domain>|$sdk_kws_domain|g" *.*
 sed -i sedbak "s|<sdk_devsuspport>|$sdk_devsuspport|g" *.*
 sed -i sedbak "s|<sdk_iosmin>|$sdk_iosmin|g" *.*
 sed -i sedbak "s|<sdk_androidmin>|$sdk_androidmin|g" *.*
+sed -i sedbak "s|<sdk_project>|$sdk_project|g" *.*
 sed -i sedbak "s|<sdk_version>|$sdk_version|g" *.*
 sed -i sedbak "s|<sdk_source>|$sdk_source|g" *.*
 sed -i sedbak "s|<sdk_author>|$sdk_author|g" *.*
