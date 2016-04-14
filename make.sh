@@ -11,7 +11,13 @@ sdk_devsuspport="devsupport@superawesome.tv"
 sdk_iosmin="iOS 6.0+"
 sdk_androidmin="API 11: Android 3.0 (Honeycomb)"
 sdk_project="iOS SDK"
-sdk_version="3.8.1"
+sdk_version_ios="3.8.1"
+sdk_version_android="3.6.5"
+sdk_version_unity="3.0.9"
+sdk_version_air="3.1.6"
+sdk_version_kws="1.0.0"
+sdk_version_web="2.0.0"
+sdk_version_flash="3.0.0"
 sdk_source="https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios"
 sdk_author="Gabriel Coman"
 
@@ -50,7 +56,13 @@ sed -i sedbak "s|<sdk_devsuspport>|$sdk_devsuspport|g" *.*
 sed -i sedbak "s|<sdk_iosmin>|$sdk_iosmin|g" *.*
 sed -i sedbak "s|<sdk_androidmin>|$sdk_androidmin|g" *.*
 sed -i sedbak "s|<sdk_project>|$sdk_project|g" *.*
-sed -i sedbak "s|<sdk_version>|$sdk_version|g" *.*
+sed -i sedbak "s|<sdk_version_ios>|$sdk_version_ios|g" *.*
+sed -i sedbak "s|<sdk_version_android>|$sdk_version_android|g" *.*
+sed -i sedbak "s|<sdk_version_unity>|$sdk_version_unity|g" *.*
+sed -i sedbak "s|<sdk_version_air>|$sdk_version_air|g" *.*
+sed -i sedbak "s|<sdk_version_flash>|$sdk_version_flash|g" *.*
+sed -i sedbak "s|<sdk_version_web>|$sdk_version_web|g" *.*
+sed -i sedbak "s|<sdk_version_kws>|$sdk_version_kws|g" *.*
 sed -i sedbak "s|<sdk_source>|$sdk_source|g" *.*
 sed -i sedbak "s|<sdk_author>|$sdk_author|g" *.*
 find . -name "*.*sedbak" -print0 | xargs -0 rm
