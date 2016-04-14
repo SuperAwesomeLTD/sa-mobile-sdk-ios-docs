@@ -12,9 +12,7 @@ There are also a few global SDK parameters you can change according to your need
 =============  ==============  =======
 Parameter      Values          Meaning
 =============  ==============  =======
-Configuration  | Production *  | Should the SDK get ads from
-               | Staging       | the production or test server.
-                               | Test placements are all on production.
+Configuration  | Production *  | Should always get ads from production server
 
 Test mode      | Enabled       | Should the SDK serve test ads. For test
                | Disabled *    | placements (30471, 30476, etc) must be Enabled.
@@ -33,9 +31,7 @@ You can specify them once in your **AppDelegate** class:
     - (BOOL) application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-        [[SuperAwesome getInstance] setConfigurationStaging];
-        // [[SuperAwesome getInstance] setConfigurationProduction];
-
+        [[SuperAwesome getInstance] setConfigurationProduction];
         [[SuperAwesome getInstance] enableTestMode];
         // [[SuperAwesome getInstance] disableTestMode];
 
@@ -55,8 +51,8 @@ or in each View Controller:
     - (void) viewDidLoad {
         [super viewDidLoad];
 
-        [[SuperAwesome getInstance] enableTestMode];
         [[SuperAwesome getInstance] setConfigurationProduction];
+        [[SuperAwesome getInstance] enableTestMode];
     }
 
     @end
