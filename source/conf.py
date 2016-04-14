@@ -3,20 +3,20 @@ import os
 
 # project variables
 project = u'iOS SDK'
-copyright = u'2016, SuperAwesome Ltd'
-author = u'Gabriel Coman'
-version = u'<iossdk_version>'
-release = u'<iossdk_version>'
+copyright = u'<sdk_company>'
+author = u'<sdk_author>'
+version = u'<sdk_version>'
+release = u'<sdk_version>'
 
 # theme config
-html_theme = 'satheme'
+html_theme = '<sdk_theme>'
 html_theme_options = {"logo_only":True}
-html_theme_path = ["themes",]
-html_logo = 'themeres/logo.png'
+html_theme_path = ["<sdk_theme_folder>",]
+html_logo = '<sdk_themeres_folder>/logo.png'
 html_context = {
     'all_versions' : [u'3.8.1'],
-    'domain': 'AwesomeAds',
-    'sourcecode': '<iossdk_source>'
+    'domain': '<sdk_aa_domain>',
+    'sourcecode': '<sdk_source>'
 }
 
 # aux vars
