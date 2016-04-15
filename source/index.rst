@@ -13,7 +13,7 @@ Version     <sdk_version_ios>
 IOS Support <sdk_iosmin>
 GitHub      <sdk_source>
 Support     `<sdk_devsuspport> <mailto:<sdk_devsuspport>>`_
-License     `LICENSE.txt <https://raw.githubusercontent.com/SuperAwesomeLTD/sa-mobile-sdk-ios/master/LICENSE.txt>`_
+License     `LICENSE.txt <https://raw.githubusercontent.com/SuperAwesomeLTD/sa-mobile-sdk-ios/master/LICENSE>`_
 =========== ========
 
 Table of Contents:
