@@ -56,7 +56,7 @@ There are
 * for Interstitial Ads: **SuperAwesomeInterstitialCustomEvent**
 * for Rewarded Video Ads: **SuperAwesomeRewardedVideoCustomEvent**
 
-Notice these are identical to the names of the four files you downloaded in step one.
+Notice these are identical to the names of the files you downloaded in step one.
 
 4) Assign custom event data as JSON:
 
