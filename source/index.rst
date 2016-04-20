@@ -28,4 +28,5 @@ Table of Contents:
    Display ads <05display>
    Parental gate <06parentalgate>
    Ad callbacks <07callbacks>
-   Examples <08examples>
+   Integrate with MoPub <08mopub>
+   Examples <09examples>
