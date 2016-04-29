@@ -34,7 +34,7 @@ To download the latest release of the SDK add the following line to your Podfile
 
 .. code-block:: shell
 
-    pod 'SuperAwesome'
+    pod 'SuperAwesome', '<sdk_version_ios>'
 
 so it looks something like this:
 
