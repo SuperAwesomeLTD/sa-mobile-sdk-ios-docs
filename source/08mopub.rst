@@ -66,9 +66,10 @@ Notice these are identical to the names of the files you downloaded in step one.
     	"placementId": 5692,
     	"isTestEnabled": true,
     	"isParentalGateEnabled": true,
+        // only for video & interstitial ads
+        "shouldLockOrientation": true,
+        "lockOrientation": "PORTRAIT" or "LANDSCAPE",
         // only for video
         "shouldShowCloseButton": false,
-        "shouldAutomaticallyCloseAtEnd": true,
-        "shouldLockOrientation": true,
-        "lockOrientation": "PORTRAIT" or "LANDSCAPE"
+        "shouldAutomaticallyCloseAtEnd": true
     }
