@@ -68,5 +68,7 @@ Notice these are identical to the names of the files you downloaded in step one.
     	"isParentalGateEnabled": true,
         // only for video
         "shouldShowCloseButton": false,
-        "shouldAutomaticallyCloseAtEnd": true
+        "shouldAutomaticallyCloseAtEnd": true,
+        "shouldLockOrientation": true,
+        "lockOrientation": "PORTRAIT" or "LANDSCAPE"
     }
