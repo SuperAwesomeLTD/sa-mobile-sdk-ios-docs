@@ -1,11 +1,17 @@
 Configure the SDK
 =================
 
-Once you've integrated the SuperAwesome SDK, you can access all functionality by including the SuperAwesome header file:
+If you've added the SDK through CocoaPods, you can import the main SDK header file like so:
 
 .. code-block:: c++
 
     #import "SuperAwesome.h"
+
+If you've added the SDK as a .framework file, you can import the same SDK header file like so:
+
+.. code-block:: c++
+
+    #import <SuperAwesomeSDK/SuperAwesome.h>
 
 There are also a few global SDK parameters you can change according to your needs:
 

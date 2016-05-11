@@ -6,11 +6,11 @@ Integrate the SDK
 * an XCode project called **iOSDemo**
 * that contains a single view controller called **MyViewController**
 
+Install the SDK through CocoaPods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 We use `CocoaPods <http://cocoapods.org>`_ in order to make installing and updating our SDK super easy.
 CocoaPods manages library dependencies for your Xcode projects.
-
-Install CocoaPods
-^^^^^^^^^^^^^^^^^
 
 If you don't have CocoaPods installed on your machine you can install it by issuing the following command in your terminal:
 
@@ -25,8 +25,6 @@ After that you need to go to the project's directory and initialize CocoaPods
     cd /path_to/iOSDemo/
     pod init
 
-Download the SDK
-^^^^^^^^^^^^^^^^
 
 The dependencies for your projects are specified in a single text file called a **Podfile**.
 CocoaPods will resolve dependencies between libraries, fetch the resulting source code, then link it together in an Xcode workspace to build your project.
@@ -55,8 +53,26 @@ After the pod source has been added, update your project's dependencies by runni
 
 Don't forget to use the **.xcworkspace** file to open your project in Xcode, instead of the **.xcproj** file, from here on out.
 
-Prerequisites
-^^^^^^^^^^^^^
+Add the SDK as a framework
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you don't want to use CocoaPods you can also install the project as a standalone **.framework** library, alongside a resource bundle.
+
+First you'll need to download the latest `SuperAwesomeSDK.framework <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios-framework/blob/master/output/SuperAwesomeSDK.framework.zip?raw=true>`_ and then
+the associated resource bundle `SuperAwesome.bundle <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios-framework/blob/master/output/SuperAwesome.bundle.zip?raw=true>`_.
+
+You'll then need to add the .framework file in the **Embedded Binaries** section of your project's target:
+
+.. image:: img/IMG_02_Setup_1.png
+
+This will also add it in your project structure.
+
+Next to it you should also drag-and-drop the resource bundle:
+
+.. image:: img/IMG_02_Setup_2.png
+
+Finish up
+^^^^^^^^^
 
 One thing to note is that sometimes, even though you're accessing SuperAwesome server data through HTTPS, the actual ad content is on HTTP, which on iOS 9+ will cause issues.
 
