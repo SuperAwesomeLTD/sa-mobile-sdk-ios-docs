@@ -82,7 +82,7 @@ Inline video ads
 
             // toggles a small video "click" button
             // instead of the whole video surface
-            [_video shouldShowSmallClickButton:true];
+            [_video setShouldShowSmallClickButton:true];
 
             [self.view addSubview: _video];
             [_video play];
@@ -150,7 +150,7 @@ Finally, fullscreen video ads are represented by **SAFullscreenVideoAd**.
 
             // toggles a small video "click" button
             // instead of the whole video surface
-            [_video shouldShowSmallClickButton:true];
+            [_fvideo setShouldShowSmallClickButton:true];
 
             // locks orientation
             [_fvideo setShouldLockOrientation:YES];
