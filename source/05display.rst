@@ -79,6 +79,11 @@ Inline video ads
         if (_videoAdData) {
             _video = [[SAVideoAd alloc] initWithFrame:frame];
             [_video setAd:_videoAdData];
+
+            // toggles a small video "click" button
+            // instead of the whole video surface
+            [_video shouldShowSmallClickButton:true];
+
             [self.view addSubview: _video];
             [_video play];
         }
@@ -105,8 +110,11 @@ Interstitial ads are represented by objects of type **SAInterstitialAd**.
         if (_interstitialAdData) {
             _interstitial = [[SAInterstitialAd alloc] init];
             [_interstitial setAd:_interstitialAdData];
+
+            // lock orientation
             [_interstitial setShouldLockOrientation:YES];
             [_interstitial setLockOrientation:UIInterfaceOrientationMaskPortrait];
+
             [self presentViewController:_interstitial animated:YES completion:^{
                 [_interstitial play];
             }];
@@ -118,11 +126,6 @@ Interstitial ads are represented by objects of type **SAInterstitialAd**.
 Again, notice the presence of setAd: and play - they perform the same role as for banner or video ads.
 
 The difference here is that the SAInterstitialAd class subclasses UIViewController, so it must be presented on screen as such.
-
-Additionally, a fullscreen video ad can have two more parameters that can be set:
-
- * **shouldLockOrientation**, which by default is NO, but can be set to YES or NO
- * **lockOrientation**, which can be set to any of UIInterfaceOrientationMaskLandscape, UIInterfaceOrientationMaskPortrait, etc, and is only executed if shouldLockOrientation is set to YES.
 
 Interstitials can be closed by calling the **close** function.
 
@@ -144,8 +147,15 @@ Finally, fullscreen video ads are represented by **SAFullscreenVideoAd**.
             [_fvideo setAd:_videoAdData];
             [_fvideo setShouldAutomaticallyCloseAtEnd:NO];
             [_fvideo setShouldShowCloseButton:YES];
+
+            // toggles a small video "click" button
+            // instead of the whole video surface
+            [_video shouldShowSmallClickButton:true];
+
+            // locks orientation
             [_fvideo setShouldLockOrientation:YES];
             [_fvideo setLockOrientation:UIInterfaceOrientationMaskLandscape];
+
             [self presentViewController:_fvideo animated:YES completion:^{
                 [_fvideo play];
             }];
@@ -156,12 +166,5 @@ Finally, fullscreen video ads are represented by **SAFullscreenVideoAd**.
 
 SAFullscreenVideoAd is also a subclasses of UIViewController, and implements the setAd: and play methods.
 Notice also the fact that we're *reusing the videoAdData* object when displaying video.
-
-Additionally, a fullscreen video ad can have two more parameters that can be set:
-
- * **shouldShowCloseButton**, which can be set to YES or NO
- * **shouldAutomaticallyCloseAtEnd**, which can be set to YES or NO
- * **shouldLockOrientation**, which by default is NO, but can be set to YES or NO
- * **lockOrientation**, which can be set to any of UIInterfaceOrientationMaskLandscape, UIInterfaceOrientationMaskPortrait, etc, and is only executed if shouldLockOrientation is set to YES.
 
 Fullscreen video ads can be closed by calling the **close** function.
