@@ -58,18 +58,13 @@ Add the SDK as a framework
 
 If you don't want to use CocoaPods you can also install the project as a standalone **.framework** library, alongside a resource bundle.
 
-First you'll need to download the latest `SuperAwesomeSDK.framework <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios-framework/blob/master/output/SuperAwesomeSDK.framework.zip?raw=true>`_ and then
-the associated resource bundle `SuperAwesome.bundle <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios-framework/blob/master/output/SuperAwesome.bundle.zip?raw=true>`_.
+First you'll need to download the latest `SuperAwesomeSDK.framework <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios-framework/blob/master/output/SuperAwesomeSDK.framework.zip?raw=true>`_.
 
 You'll then need to add the .framework file in the **Embedded Binaries** section of your project's target:
 
 .. image:: img/IMG_02_Setup_1.png
 
-This will also add it in your project structure.
-
-Next to it you should also drag-and-drop the resource bundle:
-
-.. image:: img/IMG_02_Setup_2.png
+This should also add it in your project structure.
 
 Finish up
 ^^^^^^^^^
