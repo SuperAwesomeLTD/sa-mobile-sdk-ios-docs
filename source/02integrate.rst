@@ -66,6 +66,14 @@ You'll then need to add the .framework file in the **Embedded Binaries** section
 
 This should also add it in your project structure.
 
+Add the SDK as a static library
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Additionally, you can download the latest `libSuperAwesomeSDK.zip <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios-staticlib/blob/master/output/libSuperAwesomeSDK.zip?raw=true>`_ file - which contains the **libSuperAwesomeSDK.a** and
+associated **include** folder to add to your project as a static library.
+
+Once you've downloaded the zip archive, open it and add the library and the folder in your project.
+
 Finish up
 ^^^^^^^^^
 
