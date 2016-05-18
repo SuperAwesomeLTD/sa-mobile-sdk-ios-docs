@@ -71,5 +71,9 @@ Notice these are identical to the names of the files you downloaded in step one.
         "lockOrientation": "PORTRAIT" or "LANDSCAPE",
         // only for video
         "shouldShowCloseButton": false,
-        "shouldAutomaticallyCloseAtEnd": true
+        "shouldAutomaticallyCloseAtEnd": true,
+        // enable the small video click through button
+        // omitting this means that the whole video
+        // surface is clickable
+        "shouldShowSmallClickButton":true // or false
     }
