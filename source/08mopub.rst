@@ -14,7 +14,7 @@ To do this, you must change your **Podfile** to contain the following:
     platform :ios, '6.0'
 
     target 'MyProject' do
-    pod 'SuperAwesome/MoPub'
+    pod 'SuperAwesome/MoPub', '<sdk_version_ios>'
     end
 
 and execute

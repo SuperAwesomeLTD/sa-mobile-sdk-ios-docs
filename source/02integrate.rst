@@ -58,7 +58,7 @@ Add the SDK as a framework
 
 If you don't want to use CocoaPods you can also install the project as a standalone **.framework** library, alongside a resource bundle.
 
-1) First you'll need to download the latest `SuperAwesomeSDK.framework <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios-framework/blob/master/output/SuperAwesomeSDK.framework.zip?raw=true>`_.
+1) First you'll need to download the latest `SuperAwesomeSDK-<sdk_verion_ios>.framework.zip <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/ios_build/SuperAwesomeSDK-<sdk_version_ios>.framework.zip?raw=true>`_.
 
 2) You'll then need to add the .framework file in the **Embedded Binaries** section of your project's target:
 
@@ -69,7 +69,7 @@ This should also add it in your project structure.
 Add the SDK as a static library
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Additionally, you can download the latest `libSuperAwesomeSDK.zip <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios-staticlib/blob/master/output/libSuperAwesomeSDK.zip?raw=true>`_ file - which contains the **libSuperAwesomeSDK.a** and
+Additionally, you can download the latest `libSuperAwesomeSDK-<sdk_version_ios>.zip <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/ios_build/libSuperAwesomeSDK-<sdk_version_ios>.zip?raw=true>`_ file - which contains the **libSuperAwesomeSDK.a** and
 associated **include** folder to add to your project as a static library.
 
 Once you've downloaded the zip archive, open it and add the library and the folder in your project.
