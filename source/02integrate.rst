@@ -58,7 +58,7 @@ Add the SDK as a framework
 
 If you don't want to use CocoaPods you can also install the project as a standalone **.framework** library, alongside a resource bundle.
 
-1) First you'll need to download the latest `SuperAwesomeSDK-<sdk_verion_ios>.framework.zip <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/ios_build/SuperAwesomeSDK-<sdk_version_ios>.framework.zip?raw=true>`_.
+1) First you'll need to download the latest `SuperAwesomeSDK-<sdk_version_ios>.framework.zip <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/ios_build/SuperAwesomeSDK-<sdk_version_ios>.framework.zip?raw=true>`_.
 
 2) You'll then need to add the .framework file in the **Embedded Binaries** section of your project's target:
 
