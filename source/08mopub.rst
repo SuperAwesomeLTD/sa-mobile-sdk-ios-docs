@@ -10,11 +10,14 @@ To do this, you must change your **Podfile** to contain the following:
 
 .. code-block:: shell
 
-    # Uncomment this line to define a global platform for your project
-    platform :ios, '6.0'
-
     target 'MyProject' do
-    pod 'SuperAwesome/MoPub', '<sdk_version_ios>'
+        # add the SuperAwesome SDK
+        pod 'SuperAwesome', '<sdk_version_ios>'
+        # or add just the base SDK
+        # pod 'SuperAwesome/Base', '<sdk_version_ios>'
+
+        # add the MoPub plugin
+        pod 'SuperAwesome/MoPub', '<sdk_version_ios>'
     end
 
 and execute
@@ -23,8 +26,7 @@ and execute
 
     pod update
 
-in your project directory. This will automatically add (or update) the SuperAwesome Core SDK to your current project, and also add
-three MoPub adapters:
+The MoPub plugin will contain three main classes that conform to MoPub's guidelines regarding 3rd party ad network adapters:
 
 * `SuperAwesomeBannerCustomEvent <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios/blob/master/Pod/Plugin/MoPub/SuperAwesomeBannerCustomEvent.h>`_
 * `SuperAwesomeInterstitialCustomEvent <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios/blob/master/Pod/Plugin/MoPub/SuperAwesomeInterstitialCustomEvent.h>`_
