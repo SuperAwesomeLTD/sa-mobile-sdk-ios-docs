@@ -99,6 +99,16 @@ associated **include** folder to add to your project as a static library.
 
 Once you've downloaded the zip archive, open it and add the library and the folder in your project.
 
+.. image:: img/IMG_02_Static_1.png
+
+Then add the necessary paths to **Header Search Paths**
+
+.. image:: img/IMG_02_Static_2.png
+
+And finally add the *-ObjC* flag to **Other Linker Flags**
+
+.. image:: img/IMG_02_Static_3.png
+
 Finish up
 ^^^^^^^^^
 
