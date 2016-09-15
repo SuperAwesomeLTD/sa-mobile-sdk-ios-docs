@@ -65,16 +65,11 @@ Notice these are identical to the names of the files you downloaded in step one.
 .. code-block:: shell
 
     {
-    	"placementId": 5692,
-    	"isTestEnabled": true,
-    	"isParentalGateEnabled": true,
-        // only for video & interstitial ads
+        "placementId": 30473,
+        "isTestEnabled": true,
+        "isParentalGateEnabled": true,
         "orientation": "ANY" or "PORTRAIT" or "LANDSCAPE",
-        // only for video
         "shouldShowCloseButton": false,
         "shouldAutomaticallyCloseAtEnd": true,
-        // enable the small video click through button
-        // omitting this means that the whole video
-        // surface is clickable
         "shouldShowSmallClickButton": true or false
     }

@@ -6,7 +6,6 @@ The following block of code creates and loads a banner ad:
 .. code-block:: objective-c
 
     @interface ViewController ()
-    // declare a SABannerAd outlet
     @property (weak, nonatomic) IBOutlet SABannerAd *bannerAd;
     @end
 
@@ -15,19 +14,13 @@ The following block of code creates and loads a banner ad:
     - (void)viewDidLoad {
         [super viewDidLoad];
 
-        // Enabling test mode will load
-        // one of our test ads
-        // By default it is disabled
+        // to display test ads
         [_bannerAd enableTestMode];
 
-        // The parental gate requires users to
-        // perform a simple math operation when
-        // clicking on an ad
+        // ask users to add two numbers when clicking on an ad
         [_bannerAd enableParentalGate];
 
-        // Finally you can start the loading
-        // process by telling the SDK to load an
-        // ad for a certain placement
+        // start loading ad data for a placement
         [_bannerAd load:30471];
 
     }
@@ -38,11 +31,10 @@ Once you've loaded an ad, you can also display it:
 
     @IBAction void onClick:(id) sender {
 
-        // It's good practice to check first
-        // if there is an ad available
+        // check if ad is loaded
         if ([banner hasAdAvailable]) {
 
-            // if all is OK you may play the ad
+            // display the ad
             [_bannerAd play];
         }
     }

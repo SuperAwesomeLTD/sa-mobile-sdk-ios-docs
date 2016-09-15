@@ -22,11 +22,12 @@ Table of Contents:
    :maxdepth: 2
 
    Initial setup <01dashboard>
-   Integrate the SDK <02integrate>
-   Configure the SDK <03config>
-   Banner Ads <04banner>
-   Interstitial Ads <05interstitial>
-   Video Ads <06video>
-   Ad callbacks <07callbacks>
-   Integrate with MoPub <08mopub>
-   Examples <09examples>
+   Add the SDK through CocoaPods <02addcocoa>
+   Add the SDK as a framework <03addframe>
+   Add the SDK as a static library <04addstatic>
+   Banner Ads <05banner>
+   Interstitial Ads <06interstitial>
+   Video Ads <07video>
+   Ad callbacks <08callbacks>
+   Integrate with MoPub <09mopub>
+   Examples <10examples>
