@@ -20,4 +20,4 @@ You can import the same SDK header file like so:
 
 .. code-block:: c++
 
-    #import <SuperAwesomeSDK/SuperAwesome.h>
+    #import "SuperAwesomeSDK.h"
