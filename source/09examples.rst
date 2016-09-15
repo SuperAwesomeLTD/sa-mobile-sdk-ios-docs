@@ -11,7 +11,8 @@ few lines of code.
 
     #import "SuperAwesome.h"
 
-    @interface MyViewController() <SALoaderProtocol>
+    @interface MyViewController()
+    @property (weak, nonatomic) IBOutlet SABannerAd *bannerAd;
     @end
 
     @implementation MyViewController
@@ -19,28 +20,19 @@ few lines of code.
     - (void) viewDidLoad {
         [super viewDidLoad];
 
-        // configure SDK to test mode
-        [[SuperAwesome getInstance] enableTestMode];
+        // setup the banner
+        [_bannerAd disableParentalGate];
 
-        // load ads
-        SALoader *loader = [[SALoader alloc] init];
-        loader.delegate = self;
-        [loader loadAdForPlacementId: 30471];
-    }
+        // add a callback
+        [_bannerAd setCallback:^(NSInteger placementId, SAEvent event) {
+            // when the ad loads, play it directly
+            if (event == adLoaded) {
+                [_bannerAd play];
+            }
+        }];
 
-    - (void) didLoadAd:(SAAd *)ad {
-
-        CGRect top = CGRectMake(0, 0, 320, 50);
-
-        // create the banner
-        SABannerAd *banner = [[SABannerAd alloc] initWithFrame:top];
-        [banner setAd: ad];
-        [self.view addSubview: banner];
-        [banner play];
-    }
-
-    - (void) didFailToLoadAdForPlacementId:(NSInteger)placementId {
-        NSLog("Failed to load for %ld", placementId);
+        // start the loading process
+        [_bannerAd load:30471];
     }
 
     @end
@@ -56,23 +48,7 @@ multiple callbacks.
     #import "SuperAwesome.h"
 
     @interface MyViewController()
-    <SALoaderProtocol,
-     SAAdProtocol,
-     SAParentalGateProtocol,
-     SAVideoAdProtocol>
-
-    // loader object
-    @property (nonatomic, strong) SALoader *loader;
-
-    // retained SAAd objects to hold all types of ad data
-    @property (nonatomic, strong) SAAd *bannerAdData;
-    @property (nonatomic, strong) SAAd *interstitialAdData;
-    @property (nonatomic, strong) SAAd *videoAdData;
-
-    // retained display objects
-    @property (nonatomic, strong) SABannerAd *banner;
-    @property (nonatomic, strong) SAInterstitialAd *interstitial;
-    @property (nonatomic, strong) SAFullscreenVideoAd *fvideo;
+    @property (weak, nonatomic) IBOutlet SABannerAd *bannerAd;
     @end
 
     @implementation MyViewController
@@ -80,129 +56,50 @@ multiple callbacks.
     - (void) viewDidLoad {
         [super viewDidLoad];
 
-        // additional setup ...
-        [[SuperAwesome getInstance] enableTestMode];
+        // setup the banner
+        [_bannerAd enableParentalGate];
+
+        // and load it
+        [_bannerAd load:30471];
+
+        // setup the video
+        [SAVideoAd disableParentalGate];
+        [SAVideoAd disableCloseButton];
+
+        // load
+        [SAVideoAd load:30479];
+        [SAVideoAd load:30480];
     }
 
-    //
-    // Button actions
+    @IBAction void playBanner {
 
-    - (IBAction) loadAds:(id)sender {
-
-        // load three ads in a row!
-        _loader = [[SALoader alloc] init];
-        _loader.delegate = self;
-        [_loader loadAdForPlacementId: 30471];
-        [_loader loadAdForPlacementId: 30473];
-        [_loader loadAdForPlacementId: 30479];
-    }
-
-    - (IBAction) showBanner:(id)sender {
-
-        CGRect top = CGRectMake(0, 0, 320, 50);
-
-        if (_bannerAdData) {
-            _banner = [[SABannerAd alloc] initWithFrame:top];
-            [_banner setAd: _bannerAdData];
-            [_banner setAdDelegate:self];
-            [_banner setIsParentalGateEnabled:true];
-            [self.view addSubview: _banner];
+        if ([_banner hasAdAvailable]) {
             [_banner play];
         }
     }
 
-    - (IBAction) showInterstitial:(id)sender {
-        if (_interstitialAdData) {
-            // init
-            _interstitial = [[SAInterstitialAd alloc] init];
-            [_interstitial setAd: _interstitialAdData];
-            [_interstitial setIsParentalGateEnabled:true];
-            [_interstitial setParentalGateDelegate:self];
+    @IBAction void playVideo1 {
 
-            // add to screen
-            [self presentViewController:_interstitial
-                               animated:YES
-                             completion:^{
-                [_interstitial play];
-            }];
+        if ([SAVideoAd hasAdAvailable: 30479]) {
+
+            // do some last minute setup
+            [SAVideoAd setOrientationLandscape];
+
+            // and play
+            [SAVideoAd play: 30479 fromVC: self];
         }
     }
 
-    - (IBAction) showVideoAd:(id)sender {
-        if (_videoAdData) {
-            // init
-            _fvideo = [[SAFullscreenVideoAd alloc] init];
-            [_fvideo setAd:videoAdData];
-            [_fvideo setVideoDelegate:self];
-            [_fvideo setShouldAutomaticallyCloseAtEnd:false];
-            [_fvideo setShouldShowCloseButton:false];
+    @IBAction void playVideo2 {
 
-            // add to screen
-            [self presentViewController:_fvideo
-                               animated:YES
-                             completion:^{
-                [_fvideo play];
-            }];
+        if ([SAVideoAd hasAdAvailable: 30480]) {
+
+            // do some last minute setup
+            [SAVideoAd setOrientationAny];
+
+            // and play
+            [SAVideoAd play: 30480 fromVC: self];
         }
-    }
-
-    //
-    // SALoaderProtocol implementation
-
-    - (void) didLoadAd:(SAAd *)ad {
-        // the moment the ad data gets loaded from
-        // the network, assign it to a specific retained property
-
-        if (ad.placementId == 30471) {
-            _bannerAdData = ad;
-        }
-        else if (ad.placementId == 30473) {
-            _interstitialAdData = ad;
-        }
-        else if (ad.videoAdData == 30479) {
-            _videoAdData = ad;
-        }
-    }
-
-    - (void) didFailToLoadAdForPlacementId:(NSInteger)placementId {
-        NSLog("Failed to load for %ld", placementId);
-    }
-
-    //
-    // SAAdProtocol implementation
-
-    - (void) adWasShown:(NSInteger)placementId {}
-    - (void) adFailedToShow:(NSInteger)placementId {}
-    - (void) adWasClosed:(NSInteger)placementId {}
-    - (void) adWasClicked:(NSInteger)placementId {}
-    - (void) adHasIncorrectPlacement:(NSInteger)placementId {
-        NSLog("Ad has incorrect placement for %ld", placementId);
-    }
-
-    //
-    // SAParentalGateProtocol implementation
-
-    - (void) parentalGateWasCanceled:(NSInteger)placementId {}
-    - (void) parentalGateWasFailed:(NSInteger)placementId {}
-    - (void) parentalGateWasSucceded:(NSInteger)placementId {}
-
-    //
-    // SAVideoAdProtocol implementation
-
-    - (void) adStarted:(NSInteger)placementId {}
-    - (void) videoStarted:(NSInteger)placementId {}
-    - (void) videoReachedFirstQuartile:(NSInteger)placementId {}
-    - (void) videoReachedMidpoint:(NSInteger)placementId {}
-    - (void) videoReachedThirdQuartile:(NSInteger)placementId {}
-    - (void) videoEnded:(NSInteger)placementId {}
-    - (void) adEnded:(NSInteger)placementId {}
-    - (void) allAdsEnded:(NSInteger)placementId {
-        // since we've set our video object's parameters to
-        // not show a close button AND not automatically close
-        // when all video ads have ended
-        // we can manually close the video
-        // once it's ended - here
-        [_fvideo close];
     }
 
     @end

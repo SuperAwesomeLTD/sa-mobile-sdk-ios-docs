@@ -24,9 +24,9 @@ Table of Contents:
    Initial setup <01dashboard>
    Integrate the SDK <02integrate>
    Configure the SDK <03config>
-   Load ads <04load>
-   Display ads <05display>
-   Parental gate <06parentalgate>
+   Banner Ads <04banner>
+   Interstitial Ads <05interstitial>
+   Video Ads <06video>
    Ad callbacks <07callbacks>
    Integrate with MoPub <08mopub>
    Examples <09examples>

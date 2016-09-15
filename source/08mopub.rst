@@ -69,13 +69,12 @@ Notice these are identical to the names of the files you downloaded in step one.
     	"isTestEnabled": true,
     	"isParentalGateEnabled": true,
         // only for video & interstitial ads
-        "shouldLockOrientation": true,
-        "lockOrientation": "PORTRAIT" or "LANDSCAPE",
+        "orientation": "ANY" or "PORTRAIT" or "LANDSCAPE",
         // only for video
         "shouldShowCloseButton": false,
         "shouldAutomaticallyCloseAtEnd": true,
         // enable the small video click through button
         // omitting this means that the whole video
         // surface is clickable
-        "shouldShowSmallClickButton":true // or false
+        "shouldShowSmallClickButton": true or false
     }
