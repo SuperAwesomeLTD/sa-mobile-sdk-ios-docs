@@ -11,9 +11,6 @@ You can also install the project as a standalone **.framework** library.
 
 This should also add it in your project structure.
 
-Import the SDK
-^^^^^^^^^^^^^^
-
 You can import the same SDK header file like so:
 
 .. code-block:: c++

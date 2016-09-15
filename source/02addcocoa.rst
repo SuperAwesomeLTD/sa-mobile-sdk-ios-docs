@@ -58,9 +58,6 @@ After the pod source has been added, update your project's dependencies by runni
 
 Don't forget to use the **.xcworkspace** file to open your project in Xcode, instead of the **.xcproj** file, from here on out.
 
-Import the SDK
-^^^^^^^^^^^^^^
-
 You can import the main SDK header file like so:
 
 .. code-block:: c++

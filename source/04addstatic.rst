@@ -16,9 +16,6 @@ And finally add the *-ObjC* flag to **Other Linker Flags**
 
 .. image:: img/IMG_02_Static_3.png
 
-Import the SDK
-^^^^^^^^^^^^^^
-
 You can import the same SDK header file like so:
 
 .. code-block:: c++
