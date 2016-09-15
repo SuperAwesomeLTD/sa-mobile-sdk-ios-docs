@@ -14,7 +14,7 @@ After that you need to go to the project's directory and initialize CocoaPods
 
 .. code-block:: shell
 
-    cd /path_to/iOSDemo/
+    cd /path_to/my_project/
     pod init
 
 This will also create a special file called a **Podfile**, where you can specify what dependencies to add to your new project.

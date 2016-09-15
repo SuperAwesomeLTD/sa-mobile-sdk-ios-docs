@@ -8,7 +8,7 @@ The first step in integrating the SuperAwesome SDK is to register on the `SuperA
 From here you'll be able to create apps and placements, obtain performance reports (number of impressions, clicks), view current revenue, etc.
 
 Create apps
-^^^^^^^^^^^
+-----------
 
 When first logging in to the dashboard, the first thing you'll want to do is create one or more **Apps**,
 with each app in the dashboard representing one of your own apps.
@@ -21,7 +21,7 @@ The name and domain can be configured when you create the app, while the ID is a
 In turn, each app can have multiple placements.
 
 Add placements
-^^^^^^^^^^^^^^
+--------------
 
 Placements represent ad units where creatives will be served. Creatives are the actual ad data that gets shown in your app,
 like images, videos, interactive rich media content, etc.
