@@ -28,7 +28,8 @@ Table of Contents:
    Banner Ads <05banner>
    Interstitial Ads <06interstitial>
    Video Ads <07video>
-   Ad callbacks <08callbacks>
-   Handle CPI <09cpi>
-   Integrate with MoPub <10mopub>
-   Examples <11examples>
+	 Game Wall <08gamewall>
+   Ad callbacks <09callbacks>
+   Handle CPI <10cpi>
+   Integrate with MoPub <11mopub>
+   Examples <12examples>
