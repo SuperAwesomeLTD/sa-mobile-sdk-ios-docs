@@ -7,7 +7,6 @@ copyright = u'<sdk_company>'
 author = u'<sdk_author>'
 version = u'<sdk_version_ios>'
 release = u'<sdk_version_ios>'
-sdk_id = u'<sdk_id>'
 
 # theme config
 html_theme = 'satheme'
@@ -17,7 +16,8 @@ html_logo = 'themeres/logo.png'
 html_context = {
     'all_versions' : <full_version_string>,
     'domain': '<sdk_aa_domain>',
-    'sourcecode': '<sdk_source>'
+    'sourcecode': '<sdk_source>',
+	'sdk_id': '<sdk_id>'
 }
 
 # aux vars
