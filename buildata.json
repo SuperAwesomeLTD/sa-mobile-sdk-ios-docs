@@ -1,4 +1,5 @@
 {
+	"id": "sa-mobile-sdk-ios",
 	"theme": {
 		"folder": "themes",
 		"res": "themeres",

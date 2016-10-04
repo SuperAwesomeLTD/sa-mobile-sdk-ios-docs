@@ -7,6 +7,7 @@ copyright = u'<sdk_company>'
 author = u'<sdk_author>'
 version = u'<sdk_version_ios>'
 release = u'<sdk_version_ios>'
+sdk_id = u'<sdk_id>'
 
 # theme config
 html_theme = 'satheme'

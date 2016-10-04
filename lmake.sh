@@ -10,6 +10,7 @@ then
 	sdk_domain=$(cat buildata.json | jq -r '.project.domain')
 	sdk_author=$(cat buildata.json | jq -r '.project.author')
 	sdk_min=$(cat buildata.json | jq -r '.project.min')
+	sdk_id=$(cat buildata.json | jq -r '.id')
 	sdk_source=$(cat buildata.json | jq -r '.project.source')
 	sdk_support=$(cat buildata.json | jq -r '.company.support')
 	sdk_current_version=$(cat buildata.json | jq -r '.current')
@@ -79,6 +80,7 @@ then
 				sed -i.sedbak "s|<sdk_author>|$sdk_author|g" *.*
 				sed -i.sedbak "s|<sdk_domain>|$sdk_domain|g" *.*
 				sed -i.sedbak "s|<sdk_source>|$sdk_source|g" *.*
+				sed -i.sedbak "s|<sdk_id>|$sdk_id|g" *.*
 				sed -i.sedbak "s|<sdk_version_ios>|$version|g" *.*
 				sed -i.sedbak "s|<full_version_string>|$full_version_string|g" *.*
 				sed -i.sedbak "s|<sdk_theme_folder>|$sdk_theme_folder|g" *.*
