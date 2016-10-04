@@ -36,7 +36,7 @@ then
 			then
 				if [ $version = $sdk_current_version ]
 				then
-					version_string+="u'$version (latest)', "
+					version_string+="u'latest', "
 				else
 					version_string+="u'$version', "
 				fi
