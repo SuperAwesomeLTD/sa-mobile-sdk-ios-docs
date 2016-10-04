@@ -1,0 +1,22 @@
+{
+	"theme": {
+		"folder": "themes",
+		"res": "themeres",
+		"name": "satheme"
+	},
+	"project": {
+		"name": "iOS SDK",
+		"author": "Gabriel Coman",
+		"source": "https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios",
+		"domain": "Awesome Ads",
+		"min": "iOS 6.0+"
+	},
+	"company": {
+		"name": "2016, SuperAwesome Ltd",
+		"support": "devsupport@superawesome.tv"
+	},
+	"versions": [
+		"5.1.0", "5.2.4"
+	],
+	"current": "5.2.4"
+}

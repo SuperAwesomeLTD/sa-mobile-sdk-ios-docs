@@ -14,7 +14,7 @@ html_theme_options = {"logo_only":True}
 html_theme_path = ["themes",]
 html_logo = 'themeres/logo.png'
 html_context = {
-    'all_versions' : [u'<sdk_version_ios>'],
+    'all_versions' : <full_version_string>,
     'domain': '<sdk_aa_domain>',
     'sourcecode': '<sdk_source>'
 }
