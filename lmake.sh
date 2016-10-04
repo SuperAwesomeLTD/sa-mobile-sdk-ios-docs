@@ -16,10 +16,19 @@ then
 
 	if [ -d versions ]
 	then
-		# Step 2: goto main versions folder
+
+		# Step 2: create a build/html folder needed by deploy.sh
+		if [ -d build ]
+		then
+			rm -rf build
+		fi
+		mkdir build
+		mkdir build/html/
+
+		# Step 3: goto main versions folder
 		cd versions
 
-		# Step 3: get the full version string (needed for sphinx)
+		# Step 4: get the full version string (needed for sphinx)
 		version_string=""
 		for version in *; do
 			if [ -d $version ]
@@ -34,7 +43,7 @@ then
 		rm out.dat
 		echo $full_version_string
 
-		# Step 4: now correctly build all documentations
+		# Step 5: now correctly build all documentations
 		for version in *; do
 			if [ -d $version ]
 			then
@@ -88,8 +97,15 @@ then
 
 				# go back
 				cd ..
+
+				# Step 6: copy the build HTML results into the necessary folders
+				mkdir ../build/html/$version
+				cp -rf $version/build/html/* ../build/html/$version
+				rm -rf $version/build
 			fi
 		done
+
+		cd ../
 
 	else
 		echo "To build the documentation have all your version folders (1.0.3, 1.5.2) in a central 'versions' folder."
