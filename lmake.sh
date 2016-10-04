@@ -34,7 +34,12 @@ then
 		for version in *; do
 			if [ -d $version ]
 			then
-				version_string+="u'$version', "
+				if [ $version = $sdk_current_version ]
+				then
+					version_string+="u'$version (latest)', "
+				else
+					version_string+="u'$version', "
+				fi
 				echo $version_string > out.dat;
 			fi
 		done
@@ -81,7 +86,12 @@ then
 				sed -i.sedbak "s|<sdk_domain>|$sdk_domain|g" *.*
 				sed -i.sedbak "s|<sdk_source>|$sdk_source|g" *.*
 				sed -i.sedbak "s|<sdk_id>|$sdk_id|g" *.*
-				sed -i.sedbak "s|<sdk_version_ios>|$version|g" *.*
+				if [ $version = $sdk_current_version ]
+				then
+					sed -i.sedbak "s|<sdk_version_ios>|$version (latest)|g" *.*
+				else
+					sed -i.sedbak "s|<sdk_version_ios>|$version|g" *.*
+				fi
 				sed -i.sedbak "s|<full_version_string>|$full_version_string|g" *.*
 				sed -i.sedbak "s|<sdk_theme_folder>|$sdk_theme_folder|g" *.*
 				sed -i.sedbak "s|<sdk_devsuspport>|$sdk_support|g" *.*
@@ -101,9 +111,16 @@ then
 				cd ..
 
 				# Step 6: copy the build HTML results into the necessary folders
-				mkdir ../build/html/$version
-				cp -rf $version/build/html/* ../build/html/$version
-				rm -rf $version/build
+				if [ $version = $sdk_current_version ]
+				then
+					mkdir ../build/html/latest
+					cp -rf $version/build/html/* ../build/html/latest
+					rm -rf $version/build
+				else
+					mkdir ../build/html/$version
+					cp -rf $version/build/html/* ../build/html/$version
+					rm -rf $version/build
+				fi
 			fi
 		done
 
