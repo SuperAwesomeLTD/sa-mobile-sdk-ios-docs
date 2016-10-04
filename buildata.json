@@ -15,8 +15,5 @@
 		"name": "2016, SuperAwesome Ltd",
 		"support": "devsupport@superawesome.tv"
 	},
-	"versions": [
-		"5.1.0", "5.2.4"
-	],
 	"current": "5.2.4"
 }
