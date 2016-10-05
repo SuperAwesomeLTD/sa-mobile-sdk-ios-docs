@@ -12,12 +12,12 @@ To do this, you must change your **Podfile** to contain the following:
 
     target 'MyProject' do
         # add the SuperAwesome SDK
-        pod 'SuperAwesome', '<sdk_version_ios>'
+        pod 'SuperAwesome', '<sdk_version>'
         # or add just the base SDK
-        # pod 'SuperAwesome/Base', '<sdk_version_ios>'
+        # pod 'SuperAwesome/Base', '<sdk_version>'
 
         # add the MoPub plugin
-        pod 'SuperAwesome/MoPub', '<sdk_version_ios>'
+        pod 'SuperAwesome/MoPub', '<sdk_version>'
     end
 
 and execute

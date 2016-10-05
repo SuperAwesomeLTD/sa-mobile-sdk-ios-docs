@@ -33,7 +33,7 @@ You can add SuperAwesome to your project by declaring the following Pod:
 .. code-block:: shell
 
     target 'MyProject' do
-        pod 'SuperAwesome', '<sdk_version_ios>'
+        pod 'SuperAwesome', '<sdk_version>'
     end
 
 This will tell CocoaPods to fetch the latest version of the full SuperAwesome iOS SDK. The **full** version will contain everything you
@@ -45,7 +45,7 @@ Alternatively, if you want a base version of the SDK, you can declare the follow
 .. code-block:: shell
 
     target 'MyProject' do
-        pod 'SuperAwesome/Base', '<sdk_version_ios>'
+        pod 'SuperAwesome/Base', '<sdk_version>'
     end
 
 This has the same functionality as the full version, but lacks the Moat Analytics module.
