@@ -13,7 +13,7 @@ then
 	sdk_id=$(cat buildata.json | jq -r '.id')
 	sdk_source=$(cat buildata.json | jq -r '.project.source')
 	sdk_support=$(cat buildata.json | jq -r '.company.support')
-	sdk_current_version=$(cat buildata.json | jq -r '.current')
+	sdk_current_version="0.0.0"
 
 	if [ -d versions ]
 	then
@@ -29,16 +29,39 @@ then
 		# Step 3: goto main versions folder
 		cd versions
 
-		# Step 4: get the full version string (needed for sphinx)
+		# Step 4: get the most current version based
+		# on version "size" (e.g. 5.2.4=524 > 5.1.0=510)
+		max=0
+		for version in *; do
+			dotArray=(${version//./ })
+			len=$((${#dotArray[@]}-1))
+			SUM=0;
+			for i in ${dotArray[@]};
+			do
+				pow=$((10**$len))
+				SUM=$(($SUM + $i*$pow));
+				len=$(($len-1))
+		  done;
+			echo $SUM
+
+			# check the max version and change sdk_current_version
+			if [ $SUM -gt $max ]
+			then
+				max=$SUM
+				sdk_current_version=$version
+			fi
+		done
+
+		# Step 5: get the full version string (needed for sphinx)
 		version_string=""
 		for version in *; do
 			if [ -d $version ]
 			then
 				if [ $version = $sdk_current_version ]
 				then
-					version_string+="u'latest', "
+					version_string+="{'name':u'$version', 'folder':u'latest'}, "
 				else
-					version_string+="u'$version', "
+					version_string+="{'name':u'$version', 'folder':u'$version'}, "
 				fi
 				echo $version_string > out.dat;
 			fi
@@ -49,7 +72,7 @@ then
 		rm out.dat
 		echo $full_version_string
 
-		# Step 5: now correctly build all documentations
+		# Step 6: now correctly build all documentations
 		for version in *; do
 			if [ -d $version ]
 			then
@@ -86,12 +109,7 @@ then
 				sed -i.sedbak "s|<sdk_domain>|$sdk_domain|g" *.*
 				sed -i.sedbak "s|<sdk_source>|$sdk_source|g" *.*
 				sed -i.sedbak "s|<sdk_id>|$sdk_id|g" *.*
-				if [ $version = $sdk_current_version ]
-				then
-					sed -i.sedbak "s|<sdk_version_ios>|$version (latest)|g" *.*
-				else
-					sed -i.sedbak "s|<sdk_version_ios>|$version|g" *.*
-				fi
+				sed -i.sedbak "s|<sdk_version_ios>|$version|g" *.*
 				sed -i.sedbak "s|<full_version_string>|$full_version_string|g" *.*
 				sed -i.sedbak "s|<sdk_theme_folder>|$sdk_theme_folder|g" *.*
 				sed -i.sedbak "s|<sdk_devsuspport>|$sdk_support|g" *.*
@@ -110,7 +128,7 @@ then
 				# go back
 				cd ..
 
-				# Step 6: copy the build HTML results into the necessary folders
+				# Step 7: copy the build HTML results into the necessary folders
 				if [ $version = $sdk_current_version ]
 				then
 					mkdir ../build/html/latest
