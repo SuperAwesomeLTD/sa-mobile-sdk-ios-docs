@@ -128,6 +128,7 @@ then
 				# go back
 				cd ..
 
+
 				# Step 7: copy the build HTML results into the necessary folders
 				if [ $version = $sdk_current_version ]
 				then
