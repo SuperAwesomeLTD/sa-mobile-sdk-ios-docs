@@ -70,7 +70,7 @@ then
 
 		full_version_string=$(cat out.dat)
 		full_version_string="[ $full_version_string ]"
-		rm out.dat
+		# rm out.dat
 		echo $full_version_string
 
 		# Step 6: now correctly build all documentations
