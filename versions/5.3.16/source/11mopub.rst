@@ -32,6 +32,8 @@ The MoPub plugin will contain three main classes that conform to MoPub's guideli
 * `SuperAwesomeInterstitialCustomEvent <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios/blob/master/Pod/Plugin/MoPub/SuperAwesomeInterstitialCustomEvent.h>`_
 * `SuperAwesomeRewardedVideoCustomEvent <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios/blob/master/Pod/Plugin/MoPub/SuperAwesomeRewardedVideoCustomEvent.h>`_
 
+Alternatively you can download a .zip file of the MoPub plugin, if you don't want to use CocoaPods: `SuperAwesomeSDK-<sdk_version>.iOS.MoPubPlugin.zip <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/package/aa_ios/<sdk_version>/SuperAwesomeSDK-<sdk_version>.iOS.MoPubPlugin.zip?raw=true>`_.
+
 2) Setup a MoPub custom network
 
 From your MoPub admin interface you should create a `New Network`
