@@ -1,19 +1,19 @@
 .. This page should present an overview of the whole documentation, with a TOC
    as well as a main table that lists the most important stuff about the project
 
-SuperAwesome iOS SDK
-====================
+AwesomeAds iOS SDK
+==================
 
-The SuperAwesome iOS SDK (Software Development Kit) lets you to easily add COPPA compliant advertisements to your apps.
+The AwesomeAds iOS SDK (Software Development Kit) lets you to easily add COPPA compliant advertisements to your apps.
 
 =========== ========
 Info        Contents
 =========== ========
-Version     <sdk_version>
+Version     <sdk_version> (`Changelog <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios/blob/master/CHANGELOG.md>`_)
 Support 		<sdk_min>
 GitHub      <sdk_source>
 Contact     `<sdk_devsuspport> <mailto:<sdk_devsuspport>>`_
-License     `LICENSE <https://raw.githubusercontent.com/SuperAwesomeLTD/sa-mobile-sdk-ios/master/LICENSE>`_
+License     `GNU General Public License Version 3 <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios/blob/master/LICENSE>`_
 =========== ========
 
 Table of Contents:
