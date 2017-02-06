@@ -33,6 +33,10 @@ Once you've loaded an ad, you can also display it:
         if ([SAInterstitialAd hasAdAvailable: 30473]) {
 
             // display the ad
-            [SAInterstitialAd play: 30473 fromVC:self];
+            [SAInterstitialAd play: 30473 fromVC: self];
         }
     }
+
+.. note:: When locking orientation with either the **setOrientationPortrait** or **setOrientationLandscape** methods, the SDK will first look at the list of orientations
+          supported by your app and conform to that.
+          If, for example, you set an interstitial ad to display in landscape mode but your app only supports portrait orientations, the ad will show in portrait mode.
