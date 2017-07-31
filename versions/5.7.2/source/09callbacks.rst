@@ -31,6 +31,10 @@ Banner ads, interstitials and video ads all send a number of callbacks to inform
                 // called when an ad is clicked
                 break;
             }
+            case SAEvent.adEnded: {
+                // called when a video ad has ended playing (but hasn't yet closed)
+                break;
+            }
             case adClosed: {
                 // called when a fullscreen ad is closed
                 break;
