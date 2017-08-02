@@ -7,7 +7,7 @@
 		"color": "256EFF"
 	},
 	"project": {
-		"name": "iOS SDK",
+		"name": "iOS Publisher SDK",
 		"author": "Gabriel Coman",
 		"source": "https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios",
 		"domain": "",
