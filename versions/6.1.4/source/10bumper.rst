@@ -21,10 +21,6 @@ You can enable it like so:
   // enable Bumper page on all video ads
   [SAVideoAd enableBumperPage];
 
-  //
-  // enable Bumper page on all app wall ads
-  [SAAppWall enableBumperPage];
-
 The final result will look something similar to this:
 
 .. image:: img/IMG_06_BumperPage.png
