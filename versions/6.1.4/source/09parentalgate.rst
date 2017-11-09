@@ -22,10 +22,6 @@ You can enable it like so:
   // enable Parental gate on all video ads
   [SAVideoAd enableParentalGate];
 
-  //
-  // enable Parental gate on all app wall ads
-  [SAAppWall enableParentalGate];
-
 The final result will look something similar to this:
 
 .. image:: img/IMG_06_ParentalGate.png
