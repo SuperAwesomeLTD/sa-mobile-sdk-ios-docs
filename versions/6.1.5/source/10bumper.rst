@@ -1,11 +1,56 @@
 Bumper page
 ===========
 
-The Bumper page is an optional UI element you can add to your ad placements so that when a user clicks on an ad he is
-presented with a popup informing him he's about to leave the app and open the native browser. The popup will disappear after
-a three second countdown.
+This section will show how to use the bumper element and how to customise it.
 
-You can enable it like so:
+The Bumper is an optional UI dialog that informs the user that they are about to leave a kid-safe place and
+proceed to an external website.
+
+In technical terms when a user clicks on an ad placement a bumper popup will be presented for a duration of 3 seconds
+informing that the user will be redirected to a external source.
+
+SuperAwesome's kid-safe review team will always configure the bumper when:
+
+    * An ad links to a social media site, eg YouTube, Facebook, etc.
+    * An ad links to a retailer or online shop
+
+Bumper customisation
+--------------------
+
+It is possible to customise the bumper in following ways:
+
+    1. Add a custom name.
+    2. Add a custom logo.
+
+**1. Bumper customisation - custom name.**
+
+In order to override the name on the bumper dialog, please use the following code:
+
+.. code-block:: objective-c
+
+  //
+  // customize the name displayed on the bumper page
+  [SABumperPage overrideName:@"__CUSTOM_APP_NAME__"];
+
+**2. Bumper customisation - custom logo.**
+
+In order to override the logo on the bumper dialog, please use the following code:
+
+.. code-block:: objective-c
+
+  //
+  // customize the logo displayed on the bumper page
+  [SABumperPage overrideLogo:[UIImage imageName:@"__MY_LOGO__"]];
+
+By default the Bumper page will try to use the application name and the AwesomeAds logo and will look like following:
+
+.. image:: img/IMG_06_BumperPage.png
+
+Forcing the bumper
+------------------
+
+Optionally, Publishers can choose for the bumper to always display when an ad is served on a placement.
+In order to enable the bumper, please use the following code:
 
 .. code-block:: objective-c
 
@@ -20,29 +65,3 @@ You can enable it like so:
   //
   // enable Bumper page on all video ads
   [SAVideoAd enableBumperPage];
-
-The final result will look something similar to this:
-
-.. image:: img/IMG_06_BumperPage.png
-
-These are the default values:
-
-=========== ========
-Parameter   Value
-=========== ========
-Bumper page Disabled
-=========== ========
-
-You can also customize the general appearance of the Bumper Page by calling:
-
-.. code-block:: objective-c
-
-  //
-  // customize the name displayed on the bumper page
-  [SABumperPage overrideName:@"__CUSTOM_APP_NAME__"];
-
-  //
-  // customize the logo displayed on the bumper page
-  [SABumperPage overrideLogo:[UIImage imageName:@"__MY_LOGO__"]];
-
-By default the Bumper page will try to use the application name and the AwesomeAds logo.
