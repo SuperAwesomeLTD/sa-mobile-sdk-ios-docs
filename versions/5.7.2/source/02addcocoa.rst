@@ -28,7 +28,7 @@ Usually it will look similar to this:
 
 For more information on Podfile options, please check the `Podfile <https://guides.cocoapods.org/syntax/podfile.html>`_ specification.
 
-You can add SuperAwesome to your project by declaring the following Pod:
+You can add the SDK to your project by declaring the following Pod:
 
 .. code-block:: shell
 
@@ -36,19 +36,7 @@ You can add SuperAwesome to your project by declaring the following Pod:
         pod 'SuperAwesome', '<sdk_version>'
     end
 
-This will tell CocoaPods to fetch the latest version of the full SuperAwesome iOS SDK. The **full** version will contain everything you
-need in order to load and display banner, interstitial and video ads as well as the 3rd party `Moat Analytics <https://moat.com/analytics>`_
-module.
-
-Alternatively, if you want a base version of the SDK, you can declare the following Pod:
-
-.. code-block:: shell
-
-    target 'MyProject' do
-        pod 'SuperAwesome/Base', '<sdk_version>'
-    end
-
-This has the same functionality as the full version, but lacks the Moat Analytics module.
+This will tell CocoaPods to fetch the latest version of the iOS Publisher SDK. This will contain everything you need in order to load and display banner, interstitial and video ads.
 
 After the pod source has been added, update your project's dependencies by running the following command in the terminal:
 
