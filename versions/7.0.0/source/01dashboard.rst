@@ -1,5 +1,5 @@
-Initial setup
-=============
+Preparing
+=========
 
 The first step in integrating the iOS Publisher SDK is to register on the `SuperAwesome Dashboard <http://dashboard.superawesome.tv>`_.
 

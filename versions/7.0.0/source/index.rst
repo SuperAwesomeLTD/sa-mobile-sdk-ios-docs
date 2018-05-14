@@ -34,10 +34,10 @@ Table of Contents
 .. toctree::
    :maxdepth: 2
 
-   Initial setup <01dashboard>
+   Preparing <01dashboard>
    Add the SDK through CocoaPods <02addcocoa>
-   Add the SDK as a framework <03addframe>
    Add the SDK as a static library <04addstatic>
+	 Initial setup <05initsdk>
    Banner Ads <05banner>
    Interstitial Ads <06interstitial>
    Video Ads <07video>
@@ -46,4 +46,5 @@ Table of Contents
 	 Ad callbacks <11callbacks>
 	 Integrate with MoPub <12mopub>
 	 Integrate with AdMob <13admob>
+	 Verifying a user's age <13agecheck>
    Examples <14examples>
