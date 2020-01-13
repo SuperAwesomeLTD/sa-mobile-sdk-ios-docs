@@ -6,6 +6,8 @@ presented with a popup asking him to solve a simple math sum.
 
 Its role is to prevent very young users from simply clicking on an ad and instead ask their parents for guidance.
 
+A parental gate is mandatory on all external click throughs on apps in the kids category on iOS. This should be applied if your app is in this category and you do not have your own in use, to prevent your app being blocked by Apple.
+
 You can enable it like so:
 
 .. code-block:: objective-c
