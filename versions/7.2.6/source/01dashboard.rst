@@ -16,7 +16,7 @@ with each app in the dashboard representing one of your own apps.
 Each app has a number of associated parameters such as ID, name, domain (or iTunes URL), etc.
 The name and domain can be configured when you create the app, while the ID is automatically assigned so as to be unique to each app.
 
-.. image:: img/IMG_01_Dashboard_2.png
+.. image:: img/IMG_01_Dashboard_3.png
 
 In turn, each app can have multiple placements.
 
@@ -26,7 +26,7 @@ Add placements
 Placements represent ad units where creatives will be served. Creatives are the actual ad data that gets shown in your app,
 like images, videos, interactive rich media content, etc.
 
-.. image:: img/IMG_01_Dashboard_3.png
+.. image:: img/IMG_01_Dashboard_4.png
 
 Each placement has a number of associated parameters like ID, name, format, dimension.
 
@@ -34,8 +34,6 @@ Each placement has a number of associated parameters like ID, name, format, dime
     * The name is a human readable identifier. It's good practice to name your placements something easy to remember or suggestive.
     * The format can be video, display, etc, and informs you of what type of ads should be run on the placement.
     * The dimensions give you an idea of where you should try to place the ad in your app.
-
-.. image:: img/IMG_01_Dashboard_4.png
 
 Below you can find a description of all mobile placement types, as well as test IDs, that have a 100% fill rate.
 

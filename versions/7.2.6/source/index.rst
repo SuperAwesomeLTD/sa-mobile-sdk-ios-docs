@@ -13,21 +13,6 @@ Contact     `<sdk_devsuspport> <mailto:<sdk_devsuspport>>`_
 License     `GNU Lesser General Public License Version 3 <https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios/blob/master/LICENSE>`_
 =========== ========
 
-AwesomeAds Demo App
--------------------
-
-Check out the new AwesomeAds Demo App, now available on iTunes.
-It lets you preview and troubleshoot all mobile ads on the AwesomeAds platform, on the go!
-
-+-----------------------------+-----------------------------+-----------------------------+-----------------------------+
-| .. image:: img/appscr1.jpeg | .. image:: img/appscr2.jpeg | .. image:: img/appscr3.jpeg | .. image:: img/appscr4.jpeg |
-|   :width: 100px             |   :width: 100px             |   :width: 100px             |   :width: 100px             |
-|   :height: 178px            |   :height: 178px            |   :height: 178px            |   :height: 178px            |
-+-----------------------------+-----------------------------+-----------------------------+-----------------------------+
-
-.. image:: img/appstore.png
-  :target: https://itunes.apple.com/gb/app/superawesome-ads/id1188682100?mt=8
-
 Table of Contents
 -----------------
 

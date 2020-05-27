@@ -11,10 +11,10 @@
 		"author": "Gabriel Coman",
 		"source": "https://github.com/SuperAwesomeLTD/sa-mobile-sdk-ios",
 		"domain": "",
-		"min": "iOS 8.0+"
+		"min": "iOS 10.0+"
 	},
 	"company": {
-		"name": "2018, SuperAwesome Ltd",
-		"support": "awesomeads-support@superawesome.tv"
+		"name": "2020, SuperAwesome Ltd",
+		"support": "awesomeads-support@superawesome.com"
 	}
 }
